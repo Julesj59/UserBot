@@ -17,9 +17,9 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = ("`Hey, this is a bot.`"
-                  "`My master hasn't approved you to PM.`"
-                  "`Don't spam her inbox, she'll approve you when she comes online.`"
-                  "`As much as I know her she's a nice person so be kind to her or else you'll be blocked.` ")
+                  " `My master hasn't approved you to PM.`"
+                  " `Don't spam her inbox, she'll approve you when she comes online.`"
+                  " `As much as I know her she's a nice person so be kind to her or else you'll be blocked.` ")
 # =================================================================
 
 
