@@ -16,10 +16,10 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID,
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
-UNAPPROVED_MSG = ("`Bleep blop! This is a bot. Don't fret.`\n\n"
+UNAPPROVED_MSG = ("`Hey, this is a bot.`"
                   "`My master hasn't approved you to PM.`"
-                  "`Please wait for my master to look in, he mostly approves PMs.`\n\n"
-                  "`As far as I know, he doesn't usually approve retards though.`")
+                  "`Don't spam her inbox, she'll approve you when she comes online.`"
+                  "`As much as I know her she's a nice person so be kind to her or else you'll be blocked.` ")
 # =================================================================
 
 
@@ -147,7 +147,7 @@ async def approvepm(apprvpm):
             return
 
         await apprvpm.edit(
-            f"[{name0}](tg://user?id={uid}) `approved to PM!`"
+            f"[{name0}](tg://user?id={uid}) `may text you now!`"
         )
 
         if BOTLOG:
@@ -163,7 +163,7 @@ async def blockpm(block):
     """ For .block command, block people from PMing you! """
     if not block.text[0].isalpha() and block.text[0] not in ("/", "#", "@", "!"):
 
-        await block.edit("`You are gonna be blocked from PM-ing my Master!`")
+        await block.edit("`Shooo, the end is here!`")
 
         if block.reply_to_msg_id:
             reply = await block.get_reply_message()
