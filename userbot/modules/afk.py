@@ -24,8 +24,8 @@ async def mention_afk(mention):
         if ISAFK:
             if mention.sender_id not in USERS:
                 await mention.reply(
-                    f"Sorry! My boss is AFK due to `{AFKREASON}`."
-                    "\nWould ping him to look into the message soon 😉."
+                    f"Sorry! My boss is `{AFKREASON}`."
+                    "\nWould ping her to look into the message soon 😉."
                 )
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
@@ -33,8 +33,8 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % 5 == 0:
                     await mention.reply(
                         "Sorry! But my boss is still not here."
-                        "\nTry to ping him a little later. I am sorry 😖."
-                        f"\nHe told me he was busy with `{AFKREASON}`."
+                        "\nTry to ping her a little later. I am sorry 😖."
+                        f"\nShe told me she was `{AFKREASON}`."
                     )
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
@@ -53,8 +53,8 @@ async def afk_on_pm(sender):
         if ISAFK:
             if sender.sender_id not in USERS:
                 await sender.reply(
-                    f"Sorry! My boss is AFK due to `{AFKREASON}`."
-                    "\nI'll ping him to look into the message soon 😉."
+                    f"Sorry! My boss is `{AFKREASON}`."
+                    "\nI'll ping her to look into the message soon 😉."
                 )
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
@@ -62,8 +62,8 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % 5 == 0:
                     await sender.reply(
                         "Sorry! But my boss is still not here."
-                        "\nTry to ping him a little later. I am sorry 😖."
-                        f"\nHe told me he was busy with `{AFKREASON}`."
+                        "\nTry to ping her a little later. I am sorry 😖."
+                        f"\nShe told me she was `{AFKREASON}`."
                     )
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
