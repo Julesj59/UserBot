@@ -16,7 +16,7 @@ from userbot import bot, CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.kang")
+@register(outgoing=True, pattern="^.pikapika")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     if not args.text[0].isalpha() and args.text[0] not in ("/", "#", "@", "!"):
@@ -125,7 +125,7 @@ async def kang(args):
                     await bot.send_read_acknowledge(conv.chat_id)
 
             await args.edit(
-                f"Sticker added! Your pack can be found [here](t.me/addstickers/{packname})",
+                f"Imma follow my master and I electrocuted you. Huihui. [here](t.me/addstickers/{packname})",
                 parse_mode='md'
             )
 
