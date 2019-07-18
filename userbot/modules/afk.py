@@ -80,11 +80,11 @@ async def set_afk(afk_e):
         string = str(message[5:])
         global ISAFK
         global AFKREASON
-        await afk_e.edit("AFK AF!")
+        await afk_e.edit("Tata, bye-bye!")
         if string != "":
             AFKREASON = string
         if BOTLOG:
-            await afk_e.client.send_message(BOTLOG_CHATID, "You went AFK!")
+            await afk_e.client.send_message(BOTLOG_CHATID, "Adios!")
         ISAFK = True
         raise StopPropagation
 
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     global AFKREASON
     if ISAFK:
         ISAFK = False
-        await notafk.respond("I'm no longer AFK.")
+        await notafk.respond("I'm back on track.")
         afk_info = await notafk.respond(
             "`You recieved " +
             str(COUNT_MSG) +
