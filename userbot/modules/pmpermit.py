@@ -16,10 +16,10 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID,
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
-UNAPPROVED_MSG = ("`Hey, this is a bot.`"
-                  " `My master hasn't approved you to PM.`"
-                  " `Don't spam her inbox, she'll approve you when she comes online.`"
-                  " `As much as I know her she's a nice person so be kind to her or else you'll be blocked.` ")
+UNAPPROVED_MSG = ("Hey, this is a bot."
+                  " My master hasn't approved you to PM."
+                  " Don't spam her inbox, she'll approve you when she comes online."
+                  " As much as I know her she's a nice person so be kind to her or else you'll be blocked. ")
 # =================================================================
 
 
@@ -62,7 +62,7 @@ async def permitpm(event):
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
                         "`You were spamming my master's PM, which I don't like.`"
-                        " `I'mma Report Spam.`"
+                        " `I'mma sorry but the end is here.`"
                     )
 
                     try:
@@ -147,7 +147,7 @@ async def approvepm(apprvpm):
             return
 
         await apprvpm.edit(
-            f"[{name0}](tg://user?id={uid}) `may text you now!`"
+            f"[{name0}](tg://user?id={uid}) `now has the permission to text you!`"
         )
 
         if BOTLOG:
